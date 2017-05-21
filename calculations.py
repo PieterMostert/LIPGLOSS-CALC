@@ -85,7 +85,6 @@ def calc_restrictions(restriction_bounds, recipe_ingredients, recipe_other):
     recipe_oxides = set()
     for index in recipe_ingredients:
         recipe_oxides = recipe_oxides.union(set(ingredient_compositions[index]))  # Is there a more efficient way to do this?
-    print(recipe_oxides)
      
 # First, test for obvious errors
 
@@ -97,8 +96,6 @@ def calc_restrictions(restriction_bounds, recipe_ingredients, recipe_other):
 
     for res_key, bounds in restriction_bounds.items():
         if bounds[0] > bounds[1]:
-##            print(res_key[0])
-##            print(res_key[1])
             res = restr_dict[res_key]
             print('Incompatible ' + print_res_type(res.normalization) + 'bounds on ' + res.name)
             return
