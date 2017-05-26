@@ -121,8 +121,8 @@ def calc_restrictions(restriction_bounds, recipe_ingredients, recipe_other):
         
     sum_ing_low = sum(restriction_bounds['ingredient_'+index][0] for index in recipe_ingredients)
     if sum_ing_low > 100 + delta:
-        print('The sum of the ingredient lower bounds is '+str(sum_ing_upp)
-              +'. Decrease one of the lower bounds by at least '+str(sum_ing_upp-100))     #will be a problem if they're all < sum_ing_upp-100
+        print('The sum of the ingredient lower bounds is '+str(sum_ing_low)
+              +'. Decrease one of the lower bounds by at least '+str(sum_ing_low-100))     #will be a problem if they're all < sum_ing_low-100
         return
 
     sum_ing_upp = sum(restriction_bounds['ingredient_'+index][1] for index in recipe_ingredients)
