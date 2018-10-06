@@ -1,5 +1,5 @@
 # LIPGLOSS-CALC
-The computational core of LIPGLOSS
+The computational core of LIPGLOSS. This is an older version. I've rearranged things in the LIPGLOSS repo, but it needs more work.
 
 Run calculations.py to define the calc_restrictions function. This defines the demo inputs demo_res_bounds, demo_ingredients and 
 demo_other. Running calc_restrictions(demo_res_bounds, demo_ingredients, demo_other) in the shell should print the following output (after an irrelevant warning):
